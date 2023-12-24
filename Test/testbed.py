@@ -1,17 +1,13 @@
-def equalRowCol(grid):
-    n = len(grid)
+def countBattleships(board):
+    if not board or not board[0]:
+        return 0
 
-    row_map = {}
-    col_map = {}
+    rows, cols = len(board), len(board[0])
     count = 0
 
-    for i in range(n):
-        row_tuple = tuple(grid[i])
-        col_tuple = tuple(grid[j][i] for j in range(n))
-        
-        count = count + row_map.get(row_tuple,0)
-        count = count + col_map.get(col_tuple,0)
+    for i in range(rows):
+        for j in range(cols):
+            if board[i][j] == 'X' and (i == 0 or board[i - 1][j] == '.') and (j == 0 or board[i][j - 1] == '.'):
+                count += 1
 
-        row_map = 
-
-equalRowCol([[3,1,2,2],[1,4,4,5],[2,4,2,2],[2,4,2,2]])
+    return count

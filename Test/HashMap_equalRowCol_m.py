@@ -19,7 +19,7 @@ def num_equal_pairs_optimized(grid):
         row_map[row_tuple] = row_map.get(row_tuple, 0) + 1
         col_map[col_tuple] = col_map.get(col_tuple, 0) + 1
 
-        print(row_map[row_tuple])
+        print("rmap",row_map[row_tuple])
 
     return count
 
