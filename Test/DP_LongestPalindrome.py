@@ -32,6 +32,8 @@ def longestPalindrome(s):
 
             left = left -1
             right = right +1
+            
+        #even    
         left = i
         right = i+1
         while left >=0 and right < len(s) and s[left]==s[right]:
@@ -44,4 +46,4 @@ def longestPalindrome(s):
             right = right +1
     return res
 
-print(longestPalindrome("cbbd"))
+print(longestPalindrome("babad"))
