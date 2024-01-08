@@ -1,4 +1,5 @@
 def combination_sum(k,n):
+    
     '''
     1,2,3,4,5,6,7,8,9
 
@@ -16,18 +17,19 @@ def combination_sum(k,n):
         #recursion
         for i in range(num,9+1):
             #print("sum",sum_so_far+i)
-            print(i)
             if sum_so_far + i > n:
                 break
             
             backtrack(build+[i],i+1,sum_so_far+i)
 
 
-
     backtrack([],1,0)
     return result
+
+
+
     
 # Example usage:
-k1, n1 = 3, 7
+k1, n1 = 3, 9
 output1 = combination_sum(k1, n1)
 print(output1)  # Output: [[1, 2, 4]]

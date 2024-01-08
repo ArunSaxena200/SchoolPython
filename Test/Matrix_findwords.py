@@ -6,9 +6,9 @@ def exist(board, word):
         if k == len(word) - 1:
             return True
         
-        tmp, board[i][j] = board[i][j], '/'
+        #board[i][j] = '/'
         res = dfs(i + 1, j, k + 1) or dfs(i - 1, j, k + 1) or dfs(i, j + 1, k + 1) or dfs(i, j - 1, k + 1)
-        board[i][j] = tmp
+        #board[i][j] = tmp
         #print(res)
         return res
 
@@ -26,7 +26,7 @@ board = [
     ['A','D','E','E']
 ]
 
-word = "ABCCEDAB"
+word = "ABCCEDAA"
 
 result = exist(board, word)
 print(result)

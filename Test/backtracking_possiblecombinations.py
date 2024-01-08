@@ -1,6 +1,12 @@
 def letter_combinations(digits):
     if not digits:
         return []
+    '''
+    use hash map for matching
+    abc - def 
+
+    '''
+
 
     # Define the mapping of digits to letters
     digit_mapping = {
@@ -16,9 +22,10 @@ def letter_combinations(digits):
 
     def backtrack(index, current_combination):
         # If the current combination is of the same length as digits, add it to the result
-        print(index,current_combination)
+        #print(index,current_combination)
         if index == len(digits):
             result.append(current_combination)
+            #print("res",result)
             return
 
         # Get the letters corresponding to the current digit
@@ -34,6 +41,6 @@ def letter_combinations(digits):
     return result
 
 # Example usage:
-digits = "23"
+digits = "233"
 result = letter_combinations(digits)
 print(result)

@@ -33,7 +33,3 @@ matrix = [
 
 result = set_matrix_zero(matrix)
 print(result)
-
-101
-000
-101

@@ -1,6 +1,6 @@
 def matrix(grid):
     '''
-      L        R     
+      L              R     
       1,  2,   3,   4
      5,  TB6,   7,   8
      9,  B10,  11,  12
