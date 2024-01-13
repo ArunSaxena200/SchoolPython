@@ -1,28 +1,26 @@
+def weighted_average(numbers, weights):
 
-def exists(board,word):
-    def dfs(i,j,k):
-        if not( 0 <=i < len(board)) or not (0<=j<len(board[0])) or (board[i][j]!=word[k]):
-            return False
-        if k==len(word)-1:
-            return True
-        temp,board[i][j]= board[i][j],'/'
-        res = dfs(i+1,j,k+1) or dfs(i-1,j,k+1) or dfs(i,j+1,k+1) or dfs(i,j-1,k+1)
-        board[i][j] = temp
-        return res
+    if len(numbers) != len(weights):
 
-    for i in range(len(board)):
-        for j in range(len(board[0])):
-            return dfs(i,j,0)
-    return False
+        raise ValueError("Length of numbers and weights should be the same")
 
-# Example usage:
-board = [
-    ['A','B','C','E'],
-    ['S','F','C','S'],
-    ['A','D','E','E']
-]
+    total_weighted_sum = sum(x * w for x, w in zip(numbers, weights))
+    print(total_weighted_sum)
 
-word = "ABCCEDA"
+    total_weight = sum(weights)
 
-result = exists(board, word)
-print(result)
+    print(total_weighted_sum,total_weight)
+    if total_weight == 0:
+
+        raise ValueError("Total weight should be greater than 0")
+    
+
+    return total_weighted_sum / total_weight
+
+data_list = [10, 15, 20, 25, 30]
+
+weights = [0.1, 0.2, 0.3, 0.2, 0.29]
+
+weighted_avg = weighted_average(data_list, weights)
+
+print("Weighted Average:", weighted_avg)
