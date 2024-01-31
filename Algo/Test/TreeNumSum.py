@@ -3,7 +3,6 @@ def threeNumSum(input,targetSum):
     '''
     [1,2,3,4,5] 11
     '''
-    input.sort()
     result = []
     for i in range(len(input)):
         left = i + 1

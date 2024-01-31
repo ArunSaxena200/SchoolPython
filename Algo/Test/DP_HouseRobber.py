@@ -20,6 +20,7 @@ def robber(inpArray):
     rob2=0
 
     for num in inpArray:
+        print(num)
         n= max( rob1+num, rob2)
         rob1=rob2 # this will always be the 
         rob2=n # this will alwyas be the max of all the robs other than the current num
