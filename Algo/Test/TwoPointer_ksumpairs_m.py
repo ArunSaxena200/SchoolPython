@@ -21,7 +21,7 @@ def ksum(input,targetsum):
             left = left + 1
         elif input[left] + input[right] > targetsum:
             right = right -1
-    return count
+    return count 
 
 print(ksum([4,4,1,3,1,3,2,2,5,5,1,5,2,1,2,3,5,4],2))
 
