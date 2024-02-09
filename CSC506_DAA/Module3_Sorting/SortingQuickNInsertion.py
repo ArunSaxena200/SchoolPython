@@ -30,11 +30,5 @@ def quickSortWithInsertionSort(inputArray,partitionSize = 10): # check for 10 el
       print("doing quick sort")
       return quickSort(inputArray)
 
-#print(quickSortWithInsertionSort([10, 2, 78, 4, 45, 32,-12,65,14,32,85])) #elements < 10  #12 elemenst
+print(quickSortWithInsertionSort([10, 2, 78, 4, 45, 32,-12,65,14,32,85])) #elements < 10  #12 elemenst
 
-import random
-
-random_list = random.sample(range(1, 1000000000), 1000)  # Generate a random list of 20 integers
-print("Unsorted list:", random_list)
-sorted_list = insertion(random_list)
-print("Sorted list:", sorted_list)
