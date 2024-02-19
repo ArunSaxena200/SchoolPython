@@ -10,9 +10,11 @@ def bfs(tree):
     while len(queue)>0:
         node = queue.pop(0)
         if node is not None:
-            print(node.value)
+            
             queue.append(node.left)
+            
             queue.append(node.right)
+            print(node.value)
 
 tree = Node('A',Node('B',Node('D'),Node('E')),Node('C',Node('F'),Node('G')))
 bfs(tree)

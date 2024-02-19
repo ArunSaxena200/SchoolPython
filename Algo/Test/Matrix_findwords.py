@@ -26,7 +26,7 @@ board = [
     ['A','D','E','E']
 ]
 
-word = "BCCEDA"
+word = "BCCED"
 
 result = exist(board, word)
 print(result)

@@ -1,4 +1,4 @@
-from collections import Counter
+#from collections import Counter
 def wmatch(w1,w2):
     if len(w1) != len(w2):
         return False
