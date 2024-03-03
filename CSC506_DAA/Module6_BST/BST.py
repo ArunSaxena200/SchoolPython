@@ -16,7 +16,6 @@ class Tree:
         root.left = self.build_tree(arr[:mid])
         root.right = self.build_tree(arr[mid + 1:])
         return root
-
     def walk_inorder(self, node):
         if node:
             self.walk_inorder(node.left)
@@ -70,14 +69,14 @@ tree.walk_inorder(tree.root)
 print("root",tree.root.data)  # Display the root node of the balanced binary tree
 
 tree.insert(6)  # Insert a new value
-print(tree.root.data)  # Display the root node after insertion
+#print(tree.root.data)  # Display the root node after insertion
 
 print("insert 6")
 tree.walk_inorder(tree.root)
 
 
 tree.delete(5)  # Delete a value
-print(tree.root.data)  # Display the root node after deletion
+#print(tree.root.data)  # Display the root node after deletion
 
 print("delete 5")
 tree.walk_inorder(tree.root)
