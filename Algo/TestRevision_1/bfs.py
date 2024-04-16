@@ -6,7 +6,6 @@ class Node:
 def bfs(tree):
     queue = []
     queue.append(tree)
-    print("q",queue)
     while len(queue)>0:
         node = queue.pop(0)
         if node is not None:
