@@ -30,7 +30,7 @@ def letter_combinations(digits):
 
         # Get the letters corresponding to the current digit
         letters = digit_mapping[digits[index]]
-        print("l",digits[index])
+        #print("l",digits[index])
 
         # Explore all possible combinations by appending each letter to the current combination
         for letter in letters:

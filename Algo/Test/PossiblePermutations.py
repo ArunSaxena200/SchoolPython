@@ -20,4 +20,4 @@ def permute(nums):
     backtrack(0)
     return res
 
-print(permute([1,2,3]))
+print(permute([1,2,3,4]))

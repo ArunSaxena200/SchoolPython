@@ -15,4 +15,4 @@ def maxSubseq(inpArray):
     return LIS 
             
     
-print(maxSubseq([0,1,0,3,2,3] ))
+print(maxSubseq([1,2,4,3] ))
