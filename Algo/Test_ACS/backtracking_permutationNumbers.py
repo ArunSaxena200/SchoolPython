@@ -9,7 +9,7 @@ def permSum(nums):
     res = []
     def backtrack(levels):
         # base case
-        if levels==len(nums):
+        if  levels==len(nums):
             print("inside",levels)
             res.append(nums[:])
             return
