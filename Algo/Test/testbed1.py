@@ -1,17 +1,30 @@
-def permute(nums):
+import re
+def betterCompression(s):
+    s = s.lower()
+    if not s:
+        return ''
+    
+    
+    freqChar = {}
+
+    for char,val in re.findall(r'([a-z])(\d+)',s):
+        if char in freqChar:
+            freqChar[char] += int(val)
+        else:
+            freqChar[char] = int(val)
+    
+    
+    sortedChar = sorted(freqChar)
+
+    return "".join(f'{char}{freqChar[char]}' for char in sortedChar)
+
+def decompressed(d):
     res = []
-    def backtrack(start):
-        # base case
-        if start == len(nums):
-            res.append(nums[:])
-        # iteration
-        for i in range(start,len(nums)):
-            nums[start],nums[i] = nums[i],nums[start]
-            backtrack(start+i)
-            nums[start],nums[i] = nums[i],nums[start]
+    for char,val in re.findall(r'([a-z])(\d+)',d):
+        res.append(char*int(val))
+    print(res)
+    return "".join(res)
 
-    backtrack(0)
-    return res
-
-print(permute([1,2,3]))
-
+compressed = betterCompression("a3c9b2c1")
+print(compressed)
+print(decompressed(compressed))  # Output: "aaabccccc"
