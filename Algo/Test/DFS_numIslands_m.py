@@ -17,7 +17,7 @@ def numIslands(grid):
             if grid[i][j]=="1":
                 num_islands = num_islands+1
                 dfs(i,j)
-                #print(grid)
+                print(grid)
     return num_islands
 
 grid1 = [

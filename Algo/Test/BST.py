@@ -50,4 +50,4 @@ def walk(bst):
         walk(bst.right)
 
 
-print(bst.contains(99))
+print(walk(bst))
