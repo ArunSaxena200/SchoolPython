@@ -12,7 +12,7 @@ def maxAreaOfIsland(grid):
 
     def dfs(i,j):
         if 0<=i<rows and 0<=j<cols and grid[i][j]==1:
-            grid[i][j] = 0  # Mark as visited
+            grid[i][j] = 'Seen'  # Mark as visited
             area = 1
             area = area + dfs(i-1,j)
             area = area + dfs(i+1,j)

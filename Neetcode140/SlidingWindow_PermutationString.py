@@ -22,8 +22,10 @@ def input(s1,s2):
         return False
     for char in s1:
         need[ord(char)-ord('a')]+=1
+    print(need)
     for i in range(m):
         window[ord(s2[i])-ord('a')]+=1
+
     if window == need:
         return True
     

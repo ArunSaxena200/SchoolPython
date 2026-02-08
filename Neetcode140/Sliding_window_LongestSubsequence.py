@@ -3,10 +3,9 @@ Given a string s, find the length of the longest substring without duplicate cha
 
 """
 def longestSubSeq(chars):
-    left =0
-    seen = {}
+    seen ={}
+    left = 0
     best = 0
-
     for i in range(len(chars)):
         c = chars[i]
         if c in seen and seen[c]>=left:
@@ -16,5 +15,6 @@ def longestSubSeq(chars):
     return best
 
 
-s = "ssssssssssssssssssssss"
+
+s = "abcdfghijkkkkkk"
 print(longestSubSeq(s))  # Expected: 3 ("abc")
